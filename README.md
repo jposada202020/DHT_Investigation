@@ -61,6 +61,6 @@ of the OS used.  The better the RP and the newer the OS, the reliability on the 
 
 If you happen to find this, just change the values as shown in my fork, and you could expect the above reliability if you want to use the DHT sensors
 
-In a last note. I did not test the sensor in negative temperatures. you are more than welcome to do it
+In a last note. I did test the sensor in negative temperatures.
 
 Have fun! Always!
