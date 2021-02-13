@@ -45,4 +45,4 @@ https://github.com/jposada202020/Adafruit_CircuitPython_DHT/blob/master/examples
 |---------|:----:|:-------------------------:|:--------------------------:|
 |OS          |RP4 |RP3                        |Zero W                      |
 |Stretch  |N/A  |Checksum Errors: 30<br/> Data Buffer Error: 200<br/>    Wiring Error: 0<br />  Unknown Error: 0  |Checksum Errors: TBT<br/> Data Buffer Error: TBT<br/> Wiring Error: TBT<br/>                                        Unknown Error: TBT          |
-|Buster   |Checksum Errors: TBT<br/> Data Buffer Error: TBT<br/> Wiring Error: TBT<br/> Unknown Error: TBT   |Checksum Errors: 86<br/> Data Buffer Error: 80<br/> Wiring Error: 0<br/> Unknown Error: 1|Checksum Errors: 0<br/>    Data Buffer Error: 749<br/>   Wiring Error: 1<br/>  Unknown Error: 0|
+|Buster   |Checksum Errors: 110<br/> Data Buffer Error: 9<br/> Wiring Error: 0<br/> Unknown Error: 0|Checksum Errors: 86<br/> Data Buffer Error: 80<br/> Wiring Error: 0<br/> Unknown Error: 1|Checksum Errors: 0<br/>    Data Buffer Error: 749<br/>   Wiring Error: 1<br/>  Unknown Error: 0|
