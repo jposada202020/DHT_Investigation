@@ -1,8 +1,8 @@
-This is to document some test conducted on the ADAFRUIT_CIRCUITPYTHON_DHT library
+This is to document some tests conducted on the ADAFRUIT_CIRCUITPYTHON_DHT library
 I review the issues (open/closed). Just veryfing the behaviour of the DHT sensor with some RP models
 compile a table that is in my REPO. link included
 
-Some people recommend to use the old adafruit-python-dht library, so I decide to take at look why the old library worked for some people
+Some people recommend using the old adafruit-python-dht library, so I decide to take at look why the old library worked for some people
 To be clear here we are talking about Bitbanging and note PULSEIN.
 
 I found that the new library uses the following code to start the communication
@@ -29,17 +29,20 @@ However reviewing the odl library in C code I found that the initialization time
 
 Some tests done so far using a DHT11 with the new values according to the OLD library. Test code is 
 in the examples directory
+https://github.com/jposada202020/Adafruit_CircuitPython_DHT/blob/master/examples/dht_comparaison_test.py
+###DHT11
 
-** DHT11
-|OS  |Machine   | |
-|----|----------|---|
-|  |RP3               |Zero W    |
-|Stretch  |Checksum Errors: 26  <br />Data Buffer Error: 198 <br />Wiring Error: 0<br />Unknown Error: 0|Checksum Errors: 0 <br />Data Buffer Error: 598<br />Wiring Error: 152<br />Unknown Error: 0 |
-|Buster  |Checksum Errors: 101  <br />Data Buffer Error: 30 <br />Wiring Error: 0<br />Unknown Error: 0|Checksum Errors: 0 <br />Data Buffer Error: 750<br />Wiring Error: 0<br />Unknown Error: 0 |
+| |  | Machine | |
+|:---:|:--------:|:-----:|:---:| 
+| OS     |RP4    |RP3               |Zero W    |
+|Stretch|N/A |Checksum Errors: 26<br/>Data Buffer Error: 198 <br />Wiring Error: 0<br />Unknown Error: 0|Checksum Errors: 0 <br />Data Buffer Error: 750<br />Wiring Error: 0<br />Unknown Error: 0 |
+|Buster|Checksum Errors: 101<br/>Data Buffer Error: 1<br />Wiring Error: 0<br />Unknown Error: 0|Checksum Errors: 101 <br />Data Buffer Error: 30<br />Wiring Error: 0<br />Unknown Error: 0 |Checksum Errors: 0<br/>Data Buffer Error: 598<br />Wiring Error: 152<br />Unknown Error: 0|Checksum Errors: 0 <br />Data Buffer Error: 750<br />Wiring Error: 0<br />Unknown Error: 0 |
 
-** DHT22
-|OS  |Machine   | |
-|----|----------|---|
-|  |RP3               |Zero W    |
-|Stretch  |Checksum Errors: 30  <br />Data Buffer Error: 200 <br />Wiring Error: 0<br />Unknown Error: 0|Checksum Errors: TBT <br />Data Buffer Error: TBT<br />Wiring Error: TBT<br />Unknown Error: TBT |
-|Buster  |Checksum Errors: TBT  <br />Data Buffer Error: TBT <br />Wiring Error: TBT<br />Unknown Error: TBT|Checksum Errors: TBT <br />Data Buffer Error: TBT<br />Wiring Error: TBT<br />Unknown Error: TBT |
+
+###DHT22
+
+|      | |Machine                    |                            |
+|---------|:----:|:-------------------------:|:--------------------------:|
+|OS          |RP4 |RP3                        |Zero W                      |
+|Stretch  |N/A  |Checksum Errors: 30<br/> Data Buffer Error: 200<br/>    Wiring Error: 0<br />  Unknown Error: 0  |Checksum Errors: TBT<br/> Data Buffer Error: TBT<br/> Wiring Error: TBT<br/>                                        Unknown Error: TBT          |
+|Buster   |Checksum Errors: TBT<br/> Data Buffer Error: TBT<br/> Wiring Error: TBT<br/> Unknown Error: TBT   |Checksum Errors: 86<br/> Data Buffer Error: 80<br/> Wiring Error: 0<br/> Unknown Error: 1|Checksum Errors: 0<br/>    Data Buffer Error: 749<br/>   Wiring Error: 1<br/>  Unknown Error: 0|
