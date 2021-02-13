@@ -30,9 +30,16 @@ However reviewing the odl library in C code I found that the initialization time
 Some tests done so far using a DHT11 with the new values according to the OLD library. Test code is 
 in the examples directory
 
+**DHT11
 |OS  |Machine   | |
 |----|----------|---|
 |  |RP3               |Zero W    |
 |Stretch  |Checksum Errors: 26  <br />Data Buffer Error: 198 <br />Wiring Error: 0<br />Unknown Error: 0|Checksum Errors: 0 <br />Data Buffer Error: 598<br />Wiring Error: 152<br />Unknown Error: 0 |
 |Buster  |Checksum Errors: 101  <br />Data Buffer Error: 30 <br />Wiring Error: 0<br />Unknown Error: 0|Checksum Errors: 0 <br />Data Buffer Error: 750<br />Wiring Error: 0<br />Unknown Error: 0 |
 
+**DHT22
+|OS  |Machine   | |
+|----|----------|---|
+|  |RP3               |Zero W    |
+|Stretch  |Checksum Errors: 30  <br />Data Buffer Error: 200 <br />Wiring Error: 0<br />Unknown Error: 0|Checksum Errors: TBT <br />Data Buffer Error: TBT<br />Wiring Error: TBT<br />Unknown Error: TBT |
+|Buster  |Checksum Errors: TBT  <br />Data Buffer Error: TBT <br />Wiring Error: TBT<br />Unknown Error: TBT|Checksum Errors: TBT <br />Data Buffer Error: TBT<br />Wiring Error: TBT<br />Unknown Error: TBT |
