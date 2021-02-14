@@ -29,8 +29,7 @@ However reviewing the odl library in C code I found that the initialization time
 
 I forked the library and did some test with the DHT11 adn DHT22 temperature sensor
 I changed the Initialization values in the new library with the old ones, according to the OLD library. 
-Test code is in the examples' directory
-https://github.com/jposada202020/Adafruit_CircuitPython_DHT/blob/master/examples/dht_comparaison_test.py
+Test code is in this directory
 
 Basically the code will test the sensor every 10 for 750 times and will count where in the bitbanging
 algorithm we found the error.  I test this in the command line to avoid any overhead.
