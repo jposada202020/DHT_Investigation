@@ -79,6 +79,7 @@ def read_dht11_dat():
             else:
                 continue
     if len(lengths) != 40:
+<<<<<<< HEAD
         print("Data not good, skip")
         return False
 
