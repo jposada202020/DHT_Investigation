@@ -76,4 +76,6 @@ I submit a PR to change the logic in the library to take in account the differen
 
 In a last note. I did test the DHT22 sensor in negative temperatures.
 
+There other code to for the bitbang if you like to test.
+
 Have fun! Always!
