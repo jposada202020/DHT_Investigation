@@ -13,6 +13,8 @@ dhtDevice = adafruit_dht.DHT11(pin, use_pulseio=False)
 # The values of the initialization times according to the DHT standard
 # Found in some sources in the interweb
 
+
+
 for i in range(755):
     try:
         # Print the values to the serial port
