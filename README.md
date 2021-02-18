@@ -63,4 +63,6 @@ If you happen to find this, just change the values as shown in my fork, and you 
 
 In a last note. I did test the sensor in negative temperatures.
 
+There other code to for the bitbang if you like to test.
+
 Have fun! Always!
