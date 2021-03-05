@@ -8,7 +8,7 @@ dhtDevice = adafruit_dht.DHT11(pin, use_pulseio=False)
 
 for i in range(10):
     try:
-        dhtDevice = adafruit_dht2.DHT11(pin, use_pulseio=False)
+        dhtDevice = adafruit_dht.DHT11(pin, use_pulseio=False)
         temperature_c = dhtDevice.temperature
         temperature_f = temperature_c * (9 / 5) + 32
         humidity = dhtDevice.humidity
