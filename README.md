@@ -65,17 +65,57 @@ algorithm is an error.  I test this in the command line to avoid any overhead.
 |Stretch  |N/A  |Checksum Errors: 30<br/> Data Buffer Error: 200<br/>    Wiring Error: 0<br />  Unknown Error: 0  |Checksum Errors: 0<br/> Data Buffer Error: 0<br/> Wiring Error: 750<br/>                                        Unknown Error: 0          |
 |Buster   |Checksum Errors: 110<br/> Data Buffer Error: 9<br/> Wiring Error: 0<br/> Unknown Error: 0|Checksum Errors: 86<br/> Data Buffer Error: 80<br/> Wiring Error: 0<br/> Unknown Error: 1|Checksum Errors: 0<br/>    Data Buffer Error: 749<br/>   Wiring Error: 1<br/>  Unknown Error: 0|
 
+## One Wire Enable and PIN 4
+I did some tests to verify the hypothesis that disabling the one-wire
+interface in the RP will improve the readings. Also some people mentioned 
+that using a different pin that 4 also improves teh reading. According
+to the results in the following table in my case this not seem to be right.
+This time I only did 20 cycles every 5 seconds. In the table 18/2 will represent 18 
+successful readings of the 20.
+For the zero the test was done using the old library
+
+## NEW LIBRARY
+### DHT22
+| |RP4  |  | RP3| |ZERO ||
+|:---:|:--------:|:-----:|:---:|:---:|:---:|:---:| 
+| |One Wire Disabled  | One Wire Enable |One Wire Disabled  |One Wire Enable|One Wire Disabled  |One Wire Enable|
+|Pin D17|19/1|18/2|18/2|17/3|0/20|0/20
+|Pin D4|18/2|17/3|15/5|13/7|0/20|0/20
+
+### DHT11
+| |RP4  |  | RP3| |ZERO ||
+|:---:|:--------:|:-----:|:---:|:---:|:---:|:---:| 
+| |One Wire Disabled  | One Wire Enable |One Wire Disabled  |One Wire Enable|One Wire Disabled  |One Wire Enable|
+|Pin D17|16/4|15/5|11/9|9/11|0/20|0/20
+|Pin D4|15/5|16/4|8/12|13/7|0/20|0/20
+
+
+## OLD LIBRARY
+### DHT22
+| |ZERO ||
+|:---:|:---:|:---:| 
+| |One Wire Disabled  |One Wire Enable|
+|Pin D17|3/17|5/15|
+|Pin D4|5/15|2/18|
+
+### DHT11
+| |ZERO ||
+|:---:|:---:|:---:| 
+| |One Wire Disabled  |One Wire Enable|
+|Pin D17|6/14|7/13|
+|Pin D4|3/17|2/18|
 
 ## Thoughts
 There were not intensive testing, and for the money I will always select another Temperature Sensor. However, I start this electronics journey like many people with a KIT, and this kit include a DHT11 temperature sensor. Like me,
 maybe there is some people that have this same journey. I remember porting the DHT11 BitBANG library from Arduino to Python, it was.. lets sy it was. That is why this little blue friend will always have a place in mi test JIG nad in my electronics box.
 Now, technical data, according what I saw, the reliability of the measurements depends on both the Version of the RP used and the version
-of the OS used.  The better the RP and the newer the OS, tthe better the reliability.
+of the OS used.  The better the RP and the newer the OS, the better the reliability.
 
 I submit a PR to change the logic in the library to take in account the difference in the trigger time for both sensors
 
 In a last note. I did test the DHT22 sensor in negative temperatures.
 
-There other code to for the bitbang if you like to test.
+In this REPO there are more code to for the bitbang if you like to test.
 
 Have fun! Always!
+
